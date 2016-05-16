@@ -10,7 +10,7 @@ angular.module('todoApp', [])
 
 	todoList.addTodo = function() {
 		todoList.todoItems.push(
-			{name: todoList.todoText}
+			{name: todoList.todoText, done: false}
 		)
 		todoList.todoText = '';
 	};
