@@ -9,19 +9,31 @@
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body ng-controller="TodoListController as todoList">
-	<main>
+	<main class="main">
+		<div class="section center">
+				<img src="https://static.pexels.com/photos/7112/woman-typing-writing-windows.jpg" width="189">
+				<img src="https://www.teenlife.com/media/uploads/blogs/choosing-right-high-school-courses-prepare-college/high%20school%20courses%20for%20college.jpg" width="189">
+				<img src="https://si.wsj.net/public/resources/images/OB-QF340_newham_G_20111020193833.jpg" width="189">
+				<img src="http://s3.amazonaws.com/digitaltrends-uploads-prod/2015/11/shopping-black-friday.jpg" width="189">
+				<img src="http://themomsbuzz.com/wp-content/uploads/2014/03/grocery-shopping-on-a-budget-2.jpg" width="189">
+				<img src="http://cdn2.omidoo.com/sites/default/files/imagecache/full_width/images/bydate/201508/swimmingphoto1.jpg" width="189">
+				<img src="http://cdn.skim.gs/image/upload/v1456337590/msi/kids-birthday-party-ideas_i9a1lo.jpg" width="189">
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col s6">
-					<h2>My To-Do List</h2>
+					<h1>{{listTitle}}</h1>
+					<form>
+						<input id="listTitle" ng-model="listTitle" placeholder="List name"></input>
+					</form></br>
 					<div class="row">
-						<div class="input-field col s6">
+						<div class="input-field col s12">
 							<form id="add-form" ng-submit="todoList.addTodo()">
 								<input ng-model="todoList.todoText" id="task" type="text" class="validate">
 								<label class="active" for="task">Task/Event</label>
-								<button class="btn" type="submit"><i class="material-icons">add</i></button>
+								<button id="btn-add" class="btn teal" type="submit"><i class="material-icons">add</i></button>
 							</form>
-							<button ng-click="todoList.remove()" class="btn"><i class="material-icons">delete</i></button>
+							<button id="btn-del" ng-click="todoList.remove()" class="btn teal"><i class="material-icons">delete</i></button>
 						</div>
 					</div>
 					<span>{{todoList.remaining()}} of {{todoList.todoItems.length}}</span>

@@ -1,3 +1,15 @@
+/*
+{
+	background-image: url("../img/symphony.png");
+}*/
+*
+{
+	background-image: url("../img/retina_wood.png");
+}
+#listTitle
+{
+	color: gray;
+}
 #add-form
 {
 	display: inline;
@@ -10,4 +22,8 @@
 {
 	color: grey;
 	text-decoration: line-through;
+}
+.btn
+{
+	color: teal;
 }
