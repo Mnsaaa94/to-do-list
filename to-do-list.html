@@ -22,10 +22,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col s6">
-					<h1>{{listTitle}}</h1>
+					<h1><span ng-bind="listTitle || 'My To-do List'"></span></h1>
 					<form>
-						<input id="listTitle" ng-model="listTitle" placeholder="List name"></input>
-					</form></br>
+						<p>To-do List Title: <input id="listTitle" ng-model="listTitle"></input></p>
+					</form>
 					<div class="row">
 						<div class="input-field col s12">
 							<form id="add-form" ng-submit="todoList.addTodo()">
